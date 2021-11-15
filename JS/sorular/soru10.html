@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height: 200px;
+        width: 200px;
+    }
+</style>
+<body>
+    <div>
+        <label for="">width</label>
+    <input type="text" id="w">
+    
+</div>
+<div>
+    <label for="">height</label>
+<input type="text" id="h">
+
+</div>
+    <button id="changeSize()">Hesapla</button>
+<img src="https://lh3.googleusercontent.com/proxy/7qHl7RuT9U5MQbanon6lJDPVkfM9E-T2gRT6WQjUMyY-5cVqCE8apXoD1TLHp7pahvpZL-mwwllHYKEN5iUhMNjXtUF0Epp5nKmsy24V8DAh" alt="foto" id="foto">
+    <script>
+        function changeSize() {
+            var x = document.getElementById('w').value;
+            var y =document.getElementById('y').value;
+            document.getElementById('foto').style.width = x + "px";
+            document.getElementById('foto').style.width = y + "px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
+    
+    <style>
+        body{
+            margin: 0;
+            padding: 0;;
+        }
+         *{
+            font-family: "Barlow";
+        }
+        nav{
+            display: flex;
+            height: 56px;
+            background-color: #f8f9fa;
+            padding-left: 8%;
+            padding-right: 8%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chart{
+            border:solid 1px black;
+            padding:5px;
+            display: flex;
+            border-radius: 0.25rem;
+        }
+        ul li{
+            display: inline;
+            color:gainsboro ;
+            margin-left: 20px;
+        }
+        ul li:hover{
+            color: black;
+        }
+        ul li:first-child{
+            color: black;
+        }
+
+        .flex{display: flex;
+         
+        }
+        .container{
+            height: 400px;
+            background-color:#212529 ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .box{
+            border-radius: 0.25rem;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 5%;
+           
+        }
+        .box h1,p{
+            padding: 5%;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .box img{
+            width: 100%;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            justify-content:space-around;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            
+        }
+        footer{
+            height: 120px;
+            background-color:#212529  ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#fff;
+        }
+       
+       @media screen  and (max-width:800px){
+            section{
+                display:inline;
+            }
+       }
+
+    </style>
+</head>
+<body>
+    <nav> 
+        <div class="flex">
+            <h3>Start Boostrapts</h3>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Shop</li>
+            </ul>
+        </div>
+        <div>
+            <p class="chart"><i class="gg-shopping-cart"></i>Cart  0  </p>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Shop in style</h1>
+        <h4 >With this shop hompeage template</h4>
+        
+    </div>
+    <section>
+    <div class="box">
+       
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    <div class="box">
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    <div class="box">
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    <div class="box">
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    <div class="box">
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    <div class="box">
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    <div class="box">
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    <div class="box">
+        <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="" >
+        <h1 class="bold">Fancy Product</h1>
+        <p>$40.00 - $80.00</p>
+        <p class="chart">View options</p>
+    </div>
+    
+</section>
+<footer>
+    <h3>Copyright © Your Website 2021</h3>
+</footer>
+</body>
+</html>

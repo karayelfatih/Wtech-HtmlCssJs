@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./productData.js"></script>
+</head>
+<body>
+    <ul>
+
+    </ul>
+</body>
+</html>
+
+<script>
+    //JSON => js object, c# entity,java nesne,phyton
+    //Bir internet servisine request atmanı sağlayan FETCH
+    var testFunct = () => "Merhaba Dünya"
+    
+    fetch("https://northwind.vercel.app/api/suppliers")
+    .then( (res) => res.json())
+    .then((data) =>{
+        data.forEach(item => {
+            var liElement = document.createElement('li')
+            liElement.innerHTML = item.companyName
+            document.body.appendChild(liElement);
+
+        });
+    })
+
+   
+
+
+</script>

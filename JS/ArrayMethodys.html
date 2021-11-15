@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="name">
+
+    <button onclick="find()">Gönder</button>
+    <button onclick="varmı()">Varmı</button>
+    <hr>
+    <ul id="cityList"></ul>
+</body>
+</html>
+
+<script>
+    var cities = ['İzmir','İstanbul','Ankara','ordu','Giresun','van','Antalya','Edirne']
+
+    //push metodu ile şehir ekledik
+    cities.push('Çanakkale');
+
+    //lenght propertisi ile dizideki eleman sayısını aldık
+    var count = cities.length;
+
+    //siplice 
+
+    //dizideki bir elemanın index numarasını bulma
+    cities.indexOf('Ankara')
+
+    for(i=0;i<cities.length;i++){
+        var liElement= document.createElement('li');
+        liElement.innerHTML= cities[i];
+        document.getElementById('cityList').appendChild(liElement);
+    }
+
+
+    //find butonuna basınca inputtaki değeri dizide arayacak ve onun index numarasını bana verecek
+
+
+    function find(){
+        var cityName = document.getElementById('name').value;
+        var indexNo= cities.indexof(cityName);
+        alert(indexNo);
+    }
+
+    function varmı()
+{
+    var cityName = document.getElementById('name').value;
+    
+}
+</script>

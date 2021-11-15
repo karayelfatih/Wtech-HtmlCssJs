@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="text" id="name2">
+    <br> <br>
+    <button onclick="calc()">soru1</button>
+    <br> <br>
+    <button onclick="calc2()"> Soru2</button>
+    <hr>
+    <span id="result"></span>
+ <br> <br>
+    <button onclick="calc3()">soru3</button>
+    <br> <br>
+    <button onclick="calc4()">soru4</button>
+    <br><br>
+    
+    <button onclick="calc5()">soru5</button>
+   <span id="sonuc"></span>
+    <br> <br> <br>
+    <div style="height: 200px; width: 200px; border: solid 1px black;"></div>
+    <input type="text" name='color'>
+    <button onclick="changeColor()">REnk DEğiş</button>
+    <br><br>
+    <script>
+        function calc(){
+        var data = document.getElementById('name').value;
+        var result = Number(data) * Number(data);
+        console.log(result);
+        }
+        function calc2(){
+            var data = document.getElementById('name').value;
+            var data2 = document.getElementById('name2').value;
+            var result = Number(data) + Number(data2);
+            console.log(result);
+        }
+        function calc3(){
+            var data = document.getElementById('name').value;
+            var result = (Number(data) / 100) * 18;
+           document.getElementById('result').innerHTML=data;
+        }
+        function calc4(){
+            var data = document.getElementById('name').value;
+            if (Number(data) <100){
+                var result = (Number(data) / 100) * 18;
+                
+                console.log("kdv si yüzde 18 olarak hesplandı", result);
+            }
+            else{
+                var result = (Number(data) / 100) * 8;
+               
+                console.log("kdv si yüzde 8 olarak hesplandı",result);
+            }
+        }
+        function calc5(){
+        var data = document.getElementById('name').value;
+       
+        document.getElementById('sonuc').innerHTML= data;
+    }
+    function changeColor(){
+        var color = document.getElementById('color').value;
+        document.getElementById('box').style.backgroundColor = color;
+    }
+
+    </script>
+</body>
+</html>

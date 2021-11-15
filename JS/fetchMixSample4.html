@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>Customer Count: </span>
+        <span id="customerCount">0</span>
+    </div>
+    <hr>
+    <div>
+        <label for=""> Category Id</label>
+        <input type="text" id="categoryId">
+    </div>
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="">Unit Price</label>
+        <input type="text" id="unitPrice">
+    </div>
+    <div>
+        <label for="">Unit In Stock</label>
+        <input type="text" id="unitsInStock">
+    </div>
+    
+    <div>
+        <button onclick="add()">Add</button>
+    </div>
+
+    <hr>
+    <br>
+
+    <div>
+        <label for="">Product Id</label>
+        <input type="text" name="" id="ProductId">
+    </div>
+    <div>
+        <button onclick="deleteProduct()">Delete</button>
+    </div>
+    <button onclick="getProducts()">Get Products</button>
+
+    <ul id="products">
+
+    </ul>
+</body>
+</html>
+
+<script>
+    const apiUrl='https://northwind.vercel.app/api/products';
+    var getProducts = () => {
+
+document.getElementById('products').innerHTML = ''
+
+fetch(apiUrl)
+    .then((res) => res.json())
+    .then((data) => {
+
+        data.map((item) => {
+
+            var liElement = document.createElement('li');
+            liElement.innerHTML = item.companyName + " - " + item.id
+            document.getElementById('products').appendChild(imgElement);
+        })
+
+        document.getElementById('customerCount').innerHTML = data.length
+
+    })
+
+}
+
+    var add = () => {
+        var newProduct = new Object();
+        newProduct.categoryId = document.getElementById('categoryId').value;
+        newProduct.name = document.getElementById('name').value;
+        newProduct.unitPrice = document.getElementById('unitPrice').value;
+        newProduct.unitsInStock = document.getElementById('unitsInStock').value;
+
+        var requestOptions= {
+            method :'POST',
+            headers: {
+                'Accept':'application/json',
+                'content-Type': 'application/json'
+            },
+            body:JSON.stringify(newProduct)
+        }
+
+        fetch(apiUrl,requestOptions)
+        .then((res) => res.json())
+        .then((data) =>{
+            console.log('Ürün Ekleme İşlemi Başarılı')
+            getProducts();
+        })
+    }
+     var deleteProduct = () =>{
+         var categoryId = document.getElementById('categoryId').value;
+         
+         var requestOptions = {
+            method: 'DELETE',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }
+
+        fetch(apiUrl + "/" + categoryId, requestOptions)
+            .then((res) => res.json())
+            .then((data) => {
+                getCustomers();
+            })
+     }
+</script>

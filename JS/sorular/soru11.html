@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="sayi1">
+    <input type="text" id="sayi2">
+    <input type="text" id="sayi3">
+    <input type="text" id="sayi4">
+    <input type="text" id="sayi5">
+    <button id="calc()">Hesapla</button>
+
+    <script>
+        function calc(){
+           var a= document.getElementById('sayi1').value;
+           var b= document.getElementById('sayi2').value;
+           var c= document.getElementById('sayi3').value;
+           var d= document.getElementById('sayi4').value;
+           var e= document.getElementById('sayi5').value;
+           var calc = ((Number(a) + Number(b) + Number(c) + Number(d) + Number(e) ) /5)
+           console.log("Yılsonu ortalamanız", calc)
+        }
+    </script>
+</body>
+</html>

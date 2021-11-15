@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="suppliers">
+        <tr style="position:sticky; top:0; background-color:gray">
+            <td>Company Name</td>
+            <td>Contact Name</td>
+            <td>Contact Title</td>
+            <td>Country</td>
+        </tr>
+
+
+    </table>
+</body>
+
+</html>
+
+<script>
+    var newSupplier = {
+        getAll: () => {
+            fetch('https://northwind.vercel.app/api/suppliers')
+                .then((res) => res.json())
+                .then((data) => {
+                    data.map((item) => {
+                        var trElement = document.createElement('tr');
+
+                        var tdElement1 = document.createElement('td');
+                        tdElement1.innerHTML = item.companyName
+
+                        var tdElement2 = document.createElement('td');
+                        tdElement2.innerHTML = item.contactName
+
+                        var tdElement3 = document.createElement('td');
+                        tdElement3.innerHTML = item.contactTitle
+
+                        var tdElement4 = document.createElement('td');
+                        tdElement4.innerHTML = item.address.country
+
+
+                        trElement.appendChild(tdElement1)
+                        trElement.appendChild(tdElement2)
+                        trElement.appendChild(tdElement3)
+                        trElement.appendChild(tdElement4)
+
+                        document.getElementById('suppliers').appendChild(trElement)
+
+                        if(item.address.country =='JAPAN'){
+                            trElement.style.backgroundColor= "red";
+                        }
+                    })
+                })
+        }
+    }
+
+    productManager.getAll() 
+</script>

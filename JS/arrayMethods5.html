@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./productsData.js"></script>
+</head>
+
+<body>
+    <ul id="productList">
+
+    </ul>
+</body>
+
+</html>
+<script>
+
+   //5) ** Bu sorunun array functionla ilgisi yok. Ürünleri yazdır FAKAT stok adedi 0 ise o li KIRMIZI olsun
+
+    for (i = 0; i < products.length; i++) {
+
+        var liElement = document.createElement('li');
+        liElement.innerHTML = products[i].name
+
+        if(products[i].unitsInStock == 0){
+
+            liElement.style.color = 'red'
+
+        }
+
+        document.body.appendChild(liElement);
+
+    }
+
+</script>

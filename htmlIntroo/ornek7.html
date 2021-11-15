@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornek</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        *{
+            font-size: "Barrow";
+        }
+        nav{
+            display: flex;
+            height: 56px;
+            background-color: #212529;
+            padding-left: 8%;
+            padding-right: 8%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1{
+            margin: 0px;
+            padding: 0px;
+            color:#fff;
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            padding-left: 10px;
+        }
+        ul li:first-child{
+            color:#fff;
+        }
+        ul li{
+            cursor: pointer;
+            color: gray;
+            margin-left: 20px;
+        }
+        .header{
+            padding-left: 8%;
+            padding-right: 8%;
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-between;
+        }
+        @media screen  and (max-width:800px){
+            .header{
+                display:inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <h1>Start Boostrapts</h1>
+        </div>
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <img src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="">
+        <h1>Busines mane Or tagline</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perferendis aut adipisci animi fuga, voluptates hic nesciunt illo, aspernatur nostrum est, error harum alias culpa. Rerum, culpa nesciunt repellendus vitae maiores dicta reiciendis dolorum recusandae reprehenderit similique. Enim magnam, adipisci eaque quaerat pariatur earum nobis tenetur, aperiam, velit fugit iusto.</p>
+    </div>
+</body>
+</html>

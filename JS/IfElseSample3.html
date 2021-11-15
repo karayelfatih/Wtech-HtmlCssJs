@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="not">
+    <button onclick="calc()">hesapla</button>
+
+    <script>
+        function  calc(){
+            let not = document.getElementById('not').value;
+            if (not >0 && not<45) {
+                console.log("kaldınız")
+            }
+            else if ( 45 <= not && not <55){
+                console.log("paçayı yırttın")
+            }
+            else if ( 55 <= not && not <70){
+                console.log("Akmasa da damlıyor")
+            }
+            else if ( 70 <= not && not <85){
+                console.log("iyi güzel")
+            }
+            else if ( 85 <= not && not <100){
+                console.log("hocam 2 puanı nerden kırdınız")
+
+            }
+            else{
+                console.log("böyle bir puan yok")
+            }
+        }
+    </script>
+</body>
+</html>

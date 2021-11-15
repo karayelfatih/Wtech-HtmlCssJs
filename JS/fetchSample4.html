@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">ID</label>
+        <input type="text" id="id">
+    </div>
+    <div>
+        <label for="">Company Name</label>
+        <input type="text" id="companyName">
+    </div>
+    <div>
+        <label for="">Contact Name</label>
+        <input type="text" id="contactName">
+    </div>
+    <div>
+        <label for="">Contact title</label>
+        <input type="text" id="contactTitle">
+    </div>
+    <div>
+        <button onclick="add()">Kullanıcı ekle</button>
+    </div>
+</body>
+</html>
+<script>
+ var add= () =>{
+     var newCustomers = new Object();
+     newCustomers.id = document.getElementById('id').value;
+     newCustomers.companyName = document.getElementById('companyName').value;
+     newCustomers.contactName = document.getElementById('contactName').value;
+     newCustomers.contactTitle = document.getElementById ('contactTitle').value;
+ 
+    var requestOptions = {
+        method:"POST",
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body :JSON.stringify(newCustomers)
+    }
+
+    fetch("https://northwind.vercel.app/api/customers" ,requestOptions)
+    .then((res) => res.json())
+    .then((data) =>{
+        console.log(data);
+        alert("yeni kullanıcı eklendi");
+    })
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    }
+
+</script>
